@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ioannis Mandralis - Robotics & Control Theory Researcher</title>
+    <title>John Doe - Robotics & Control Theory Researcher</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -19,9 +19,28 @@
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            position: relative;
         }
         header h1 {
-            font-size: 2.5rem; /* Adjust this value for a larger or smaller title */
+            font-size: 2.5rem;
+        }
+        nav {
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
         }
         .container {
             width: 80%;
@@ -33,7 +52,7 @@
         h1, h2, h3 {
             color: #333;
         }
-        .intro, .research, .publications, .contact {
+        .intro, .research, .teaching, .publications, .contact {
             margin-bottom: 2rem;
         }
         .contact p {
@@ -46,28 +65,51 @@
             color: #fff;
             margin-top: 2rem;
         }
+        .photo-placeholder {
+            width: 150px;
+            height: 200px;
+            background-color: #ddd;
+            display: block;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Ioannis Mandralis</h1>
+        <h1>John Doe</h1>
         <p>PhD Student at Caltech - Robotics, Control Theory, Aerospace Applications</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#research">Research</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="container">
-        <section class="intro">
+        <section id="about" class="intro">
             <h2>About Me</h2>
-            <p>Welcome! I am Ioannis Mandralis, a PhD student at the California Institute of Technology (Caltech) specializing in robotics, control theory, and aerospace applications. My research focuses on developing advanced control algorithms for autonomous systems and improving the robustness and efficiency of aerospace technologies.</p>
+            <div class="photo-placeholder"></div>
+            <p>Welcome! I am John Doe, a PhD student at the California Institute of Technology (Caltech) specializing in robotics, control theory, and aerospace applications. My research focuses on developing advanced control algorithms for autonomous systems and improving the robustness and efficiency of aerospace technologies.</p>
         </section>
-        <section class="research">
+        <section id="teaching" class="teaching">
+            <h2>Teaching</h2>
+            <p>I have had the opportunity to teach and assist in several courses at Caltech, focusing on control systems and robotics. Some of the courses include:</p>
+            <ul>
+                <li>Introduction to Control Systems (EE 123) - Teaching Assistant</li>
+                <li>Advanced Robotics (ME 225) - Guest Lecturer</li>
+                <li>Control Theory for Aerospace Applications (Ae 201) - Course Instructor</li>
+            </ul>
+            <p>My teaching philosophy centers around engaging students with practical applications and hands-on projects, ensuring they can relate theoretical concepts to real-world problems.</p>
+        </section>
+        <section id="research" class="research">
             <h2>Research Interests</h2>
             <ul>
                 <li>Robotics: Autonomous systems, robotic manipulation, multi-agent systems.</li>
                 <li>Control Theory: Nonlinear control, adaptive control, robust control.</li>
                 <li>Aerospace Applications: UAVs, spacecraft dynamics, flight control systems.</li>
             </ul>
-        </section>
-        <section class="publications">
-            <h2>Publications</h2>
+            <h3>Selected Publications</h3>
             <ul>
                 <li>Doe, J., Smith, A., "Adaptive Control for UAV Path Planning", <i>Journal of Aerospace Engineering</i>, 2023.</li>
                 <li>Doe, J., Brown, B., "Robust Nonlinear Control of Robotic Manipulators", <i>IEEE Transactions on Robotics</i>, 2022.</li>
@@ -83,7 +125,7 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Ioannis Mandralis. All rights reserved.</p>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
     </footer>
 </body>
 </html>
