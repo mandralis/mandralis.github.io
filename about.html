@@ -23,12 +23,29 @@
         header h1 {
             font-size: 2.5rem;
         }
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
         .container {
             width: 80%;
             margin: 2rem auto;
             padding: 2rem;
             background: #fff;
-            text-align: left;
+            text-align: center;
         }
         .photo-placeholder {
             width: 150px;
@@ -51,7 +68,14 @@
         <h1>John Doe</h1>
         <p>PhD Student at Caltech - Robotics, Control Theory, Aerospace Applications</p>
     </header>
-    <div id="nav-placeholder"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="research.html">Research</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h2>About Me</h2>
         <div class="photo-placeholder"></div>
@@ -60,6 +84,5 @@
     <footer>
         <p>&copy; 2024 John Doe. All rights reserved.</p>
     </footer>
-    <script src="nav.js"></script>
 </body>
 </html>
