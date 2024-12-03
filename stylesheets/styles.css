@@ -277,7 +277,7 @@ footer {
 
 ul, ol {
   margin: 0 0 20px; /* Maintain space above and below the entire list */
-  padding: 0; /* Reset default padding */
+  padding-left: 40px;
 }
 
 ul li, ol li {
