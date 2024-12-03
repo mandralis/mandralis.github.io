@@ -268,16 +268,3 @@ footer {
     color:#444;
   }
 }
-
-.gif-container {
-  display: flex; /* Enables horizontal alignment */
-  justify-content: space-around; /* Adds spacing between GIFs */
-  align-items: center; /* Vertically aligns GIFs */
-  gap: 20px; /* Adds space between GIFs (optional) */
-}
-
-.research-gif {
-  max-width: 45%; /* Ensures GIFs fit within the container */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 8px; /* Optional: Adds rounded corners */
-}
