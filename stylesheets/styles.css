@@ -268,3 +268,9 @@ footer {
     color:#444;
   }
 }
+
+.research-gif {
+  max-width: 100%; /* Ensures GIFs fit within the container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 0px; /* Optional: Adds rounded corners */
+}
