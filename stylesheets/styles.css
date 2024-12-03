@@ -125,7 +125,6 @@ header li {
   float:left;
   border-right:1px solid #e0e0e0;
   height:40px;
-  margin-bottom:40px;
 }
 
 header li:first-child a {
@@ -274,4 +273,14 @@ footer {
   max-width: 100%; /* Ensures GIFs fit within the container */
   height: auto; /* Maintains aspect ratio */
   border-radius: 0px; /* Optional: Adds rounded corners */
+}
+
+ul, ol {
+  margin: 0 0 20px; /* Maintain space above and below the entire list */
+  padding: 0; /* Reset default padding */
+}
+
+ul li, ol li {
+  margin-bottom: 10px; /* Adds space between individual list items */
+  line-height: 1.6; /* Adjusts the spacing within each item for readability */
 }
