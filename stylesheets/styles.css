@@ -284,3 +284,9 @@ ul li, ol li {
   margin-bottom: 10px; /* Adds space between individual list items */
   line-height: 1.6; /* Adjusts the spacing within each item for readability */
 }
+
+video, iframe {
+  display: block; /* Ensures it occupies its own line */
+  margin: 20px 0; /* Adds space above and below the video */
+  max-width: 100%; /* Makes the video responsive */
+}
