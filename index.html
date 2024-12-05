@@ -214,27 +214,32 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const carousel = document.querySelector('.carousel');
-        const images = carousel.querySelectorAll('img');
+        const images = document.querySelectorAll('.carousel-image img');
         const prevButton = document.querySelector('.carousel-button.prev');
         const nextButton = document.querySelector('.carousel-button.next');
-
         let currentIndex = 0;
 
-        const updateCarousel = () => {
-          const offset = -currentIndex * 100; // Calculate offset percentage
-          carousel.style.transform = `translateX(${offset}%)`;
+        const updateCarousel = (newIndex) => {
+          images[currentIndex].classList.remove('active');
+          images[newIndex].classList.add('active');
+          currentIndex = newIndex;
         };
 
         prevButton.addEventListener('click', () => {
-          currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-          updateCarousel();
+          const newIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+          updateCarousel(newIndex);
         });
 
         nextButton.addEventListener('click', () => {
-          currentIndex = (currentIndex + 1) % images.length;
-          updateCarousel();
+          const newIndex = (currentIndex + 1) % images.length;
+          updateCarousel(newIndex);
         });
+
+        // Optional: Auto-slide every 3 seconds
+        setInterval(() => {
+          const newIndex = (currentIndex + 1) % images.length;
+          updateCarousel(newIndex);
+        }, 3000);
       });
     </script>
   </body>
