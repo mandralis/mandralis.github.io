@@ -315,39 +315,23 @@ video, iframe {
 
 .gallery-section {
   margin: 50px 0;
-  text-align: center;
+  text-align: left;
 }
-
-.carousel-container {
+.gallery-container {
   position: relative;
   width: 80%;
   max-width: 600px;
   margin: auto;
-  overflow: hidden;
+  text-align: center;
+}
+
+.gallery-display {
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-image {
-  position: relative;
-}
-
-.carousel-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  z-index: 0;
-}
-
-.carousel-image img.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-.carousel-button {
+.gallery-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -357,16 +341,17 @@ video, iframe {
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
+  font-size: 20px;
 }
 
-.carousel-button:hover {
+.gallery-button:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.carousel-button.prev {
+.gallery-button.prev {
   left: 10px;
 }
 
-.carousel-button.next {
+.gallery-button.next {
   right: 10px;
 }

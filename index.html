@@ -192,14 +192,11 @@
 
       <section id="gallery" class="gallery-section">
         <h1>Gallery</h1>
-        <div class="carousel-container">
-          <div class="carousel">
-            <img src="images/cast-apr.jpg" alt="Image 1">
-            <img src="images/thrust_recapture_website_crop.png" alt="Image 2">
-          </div>
-          <button class="carousel-button prev" aria-label="Previous">&#10094;</button>
-          <button class="carousel-button next" aria-label="Next">&#10095;</button>
-        </div>
+        <div class="gallery-container">
+          <button class="gallery-button prev" aria-label="Previous">&#10094;</button>
+          <img src="images/cast-apr.jpg" alt="Gallery Image" class="gallery-display">
+          <button class="gallery-button next" aria-label="Next">&#10095;</button>
+        </div>        
       </section>      
 
       <footer>
@@ -214,32 +211,29 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const images = document.querySelectorAll('.carousel-image img');
-        const prevButton = document.querySelector('.carousel-button.prev');
-        const nextButton = document.querySelector('.carousel-button.next');
+        const galleryImages = [
+          'images/cast-apr.jpg',
+          'images/thrust_recapture_website_crop.png'
+        ];
+        
         let currentIndex = 0;
+        const galleryDisplay = document.querySelector('.gallery-display');
+        const prevButton = document.querySelector('.gallery-button.prev');
+        const nextButton = document.querySelector('.gallery-button.next');
 
-        const updateCarousel = (newIndex) => {
-          images[currentIndex].classList.remove('active');
-          images[newIndex].classList.add('active');
-          currentIndex = newIndex;
+        const updateImage = () => {
+          galleryDisplay.src = galleryImages[currentIndex];
         };
 
         prevButton.addEventListener('click', () => {
-          const newIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-          updateCarousel(newIndex);
+          currentIndex = (currentIndex === 0) ? galleryImages.length - 1 : currentIndex - 1;
+          updateImage();
         });
 
         nextButton.addEventListener('click', () => {
-          const newIndex = (currentIndex + 1) % images.length;
-          updateCarousel(newIndex);
+          currentIndex = (currentIndex + 1) % galleryImages.length;
+          updateImage();
         });
-
-        // Optional: Auto-slide every 3 seconds
-        setInterval(() => {
-          const newIndex = (currentIndex + 1) % images.length;
-          updateCarousel(newIndex);
-        }, 3000);
       });
     </script>
   </body>
