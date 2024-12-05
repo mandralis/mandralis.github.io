@@ -312,49 +312,53 @@ video, iframe {
   font-size: 18px; /* Adjust icon size */
   vertical-align: middle;
 }
-
 .gallery-container {
   position: relative;
-  max-width: 600px; /* Set a maximum width for the gallery */
+  width: 100%; /* Full width of the column */
   margin: 0 auto; /* Center the gallery */
   text-align: center;
+  overflow: hidden; /* Ensure the image stays within bounds */
 }
 
 #galleryImage {
-  width: 100%; /* Make the image responsive */
+  width: 100%; /* Fill the container width */
+  height: auto; /* Maintain aspect ratio */
   display: block;
-  border-radius: 5px; /* Optional: Rounded corners */
 }
 
 .gallery-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
   color: white;
   border: none;
-  font-size: 24px;
+  font-size: 36px; /* Bigger arrow icons */
   cursor: pointer;
-  padding: 10px;
-  border-radius: 50%; /* Optional: Make the buttons circular */
+  padding: 10px 15px;
+  border-radius: 50%; /* Make the buttons circular */
   z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+  transition: background 0.3s, transform 0.3s;
 }
 
 .left-arrow {
-  left: 10px; /* Position the left arrow */
+  left: 20px; /* Space from the left edge */
 }
 
 .right-arrow {
-  right: 10px; /* Position the right arrow */
+  right: 20px; /* Space from the right edge */
 }
 
 .gallery-arrow:hover {
-  background: rgba(0, 0, 0, 0.8); /* Darken background on hover */
+  background: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+  transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
 }
 
 #galleryCaption {
   margin-top: 10px;
-  font-size: 16px;
-  color: #444; /* Customize text color */
+  font-size: 18px;
+  color: #222; /* Darker text color */
+  font-weight: bold;
   text-align: center;
 }
