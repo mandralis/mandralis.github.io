@@ -312,6 +312,7 @@ video, iframe {
   font-size: 18px; /* Adjust icon size */
   vertical-align: middle;
 }
+
 .gallery-container {
   position: relative;
   width: 100%; /* Full width of the column */
@@ -357,7 +358,7 @@ video, iframe {
 
 #galleryCaption {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 11px;
   color: #222; /* Darker text color */
   font-weight: bold;
   text-align: center;
