@@ -199,9 +199,7 @@
           </div>
           <button class="carousel-button prev" aria-label="Previous">&#10094;</button>
           <button class="carousel-button next" aria-label="Next">&#10095;</button>
-        </div>        
-        <button class="carousel-control prev">&lt;</button>
-        <button class="carousel-control next">&gt;</button>
+        </div>
       </section>      
 
       <footer>
@@ -215,33 +213,29 @@
     </div>
 
     <script>
-      const carouselItems = document.querySelectorAll('.carousel-item');
-      const prevButton = document.querySelector('.carousel-control.prev');
-      const nextButton = document.querySelector('.carousel-control.next');
+      document.addEventListener('DOMContentLoaded', () => {
+        const carousel = document.querySelector('.carousel');
+        const images = carousel.querySelectorAll('img');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
 
-      let currentIndex = 0;
+        let currentIndex = 0;
 
-      function showSlide(index) {
-        carouselItems.forEach((item, i) => {
-          item.classList.toggle('active', i === index);
+        const updateCarousel = () => {
+          const offset = -currentIndex * 100; // Calculate offset percentage
+          carousel.style.transform = `translateX(${offset}%)`;
+        };
+
+        prevButton.addEventListener('click', () => {
+          currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+          updateCarousel();
         });
-      }
 
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-        showSlide(currentIndex);
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        showSlide(currentIndex);
-      }
-
-      prevButton.addEventListener('click', prevSlide);
-      nextButton.addEventListener('click', nextSlide);
-
-      // Auto-play functionality (optional)
-      setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        nextButton.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateCarousel();
+        });
+      });
     </script>
   </body>
 </html>
