@@ -313,45 +313,48 @@ video, iframe {
   vertical-align: middle;
 }
 
-.gallery-section {
-  margin: 50px 0;
-  text-align: left;
-}
 .gallery-container {
   position: relative;
-  width: 80%;
-  max-width: 600px;
-  margin: auto;
+  max-width: 600px; /* Set a maximum width for the gallery */
+  margin: 0 auto; /* Center the gallery */
   text-align: center;
 }
 
-.gallery-display {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+#galleryImage {
+  width: 100%; /* Make the image responsive */
+  display: block;
+  border-radius: 5px; /* Optional: Rounded corners */
 }
 
-.gallery-button {
+.gallery-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   color: white;
-  padding: 10px;
+  border: none;
+  font-size: 24px;
   cursor: pointer;
-  border-radius: 50%;
-  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%; /* Optional: Make the buttons circular */
+  z-index: 10;
 }
 
-.gallery-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+.left-arrow {
+  left: 10px; /* Position the left arrow */
 }
 
-.gallery-button.prev {
-  left: 10px;
+.right-arrow {
+  right: 10px; /* Position the right arrow */
 }
 
-.gallery-button.next {
-  right: 10px;
+.gallery-arrow:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darken background on hover */
+}
+
+#galleryCaption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #444; /* Customize text color */
+  text-align: center;
 }

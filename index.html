@@ -189,10 +189,11 @@
       <section>
         <h1>Gallery</h1>
         <div class="gallery-container">
-          <button class="gallery-button prev" aria-label="Previous">&#10094;</button>
-          <img src="images/cast-apr.jpg" alt="Gallery Image" class="gallery-display">
-          <button class="gallery-button next" aria-label="Next">&#10095;</button>
-        </div>        
+          <button class="gallery-arrow left-arrow" onclick="prevImage()">&#10094;</button>
+          <img id="galleryImage" src="images/cast-apr.jpg" alt="Gallery Image">
+          <button class="gallery-arrow right-arrow" onclick="nextImage()">&#10095;</button>
+          <p id="galleryCaption"></p>
+        </div>
       </section>      
 
       <footer>
@@ -206,31 +207,33 @@
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const galleryImages = [
-          'images/cast-apr.jpg',
-          'images/thrust_recapture_website_crop.png'
-        ];
-        
-        let currentIndex = 0;
-        const galleryDisplay = document.querySelector('.gallery-display');
-        const prevButton = document.querySelector('.gallery-button.prev');
-        const nextButton = document.querySelector('.gallery-button.next');
+      const galleryImages = [
+        { src: 'images/cast-apr.jpg', caption: 'Caption for Image 1' },
+        { src: 'images/thrust_recapture_website_crop.png', caption: 'Caption for Image 2' },
+      ];
 
-        const updateImage = () => {
-          galleryDisplay.src = galleryImages[currentIndex];
-        };
+      let currentIndex = 0;
 
-        prevButton.addEventListener('click', () => {
-          currentIndex = (currentIndex === 0) ? galleryImages.length - 1 : currentIndex - 1;
-          updateImage();
-        });
+      function updateGallery() {
+        const galleryImage = document.getElementById('galleryImage');
+        const galleryCaption = document.getElementById('galleryCaption');
 
-        nextButton.addEventListener('click', () => {
-          currentIndex = (currentIndex + 1) % galleryImages.length;
-          updateImage();
-        });
-      });
+        galleryImage.src = galleryImages[currentIndex].src;
+        galleryCaption.textContent = galleryImages[currentIndex].caption;
+      }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateGallery();
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        updateGallery();
+      }
+
+      // Initialize the gallery
+      updateGallery();
     </script>
   </body>
 </html>
