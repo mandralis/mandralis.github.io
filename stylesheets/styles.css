@@ -318,52 +318,46 @@ video, iframe {
   text-align: center;
 }
 
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .carousel {
   display: flex;
-  overflow: hidden;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.carousel-item {
-  min-width: 100%;
   transition: transform 0.5s ease-in-out;
-  display: none;
-}
-
-.carousel-item.active {
-  display: block;
 }
 
 .carousel img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  flex-shrink: 0;
 }
 
-.carousel-control {
+.carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
+  color: white;
   padding: 10px;
   cursor: pointer;
+  border-radius: 50%;
 }
 
-.carousel-control.prev {
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button.prev {
   left: 10px;
 }
 
-.carousel-control.next {
+.carousel-button.next {
   right: 10px;
 }
-
-.carousel-control:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-
