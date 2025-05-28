@@ -363,3 +363,12 @@ video, iframe {
   font-weight: bold;
   text-align: center;
 }
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;      /* This makes it circular */
+  object-fit: cover;       /* Ensures the image fills the circle */
+  border: 2px solid #ccc;  /* Optional: light border */
+  margin-bottom: 15px;     /* Optional: space below image */
+}
