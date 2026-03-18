@@ -357,9 +357,9 @@ video, iframe {
 }
 
 .profile-photo {
-  width: 220px;
-  height: 220px;
-  max-width: 220px;
+  width: 260px;
+  height: 260px;
+  max-width: 260px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
