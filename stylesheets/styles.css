@@ -356,20 +356,22 @@ video, iframe {
   transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
 }
 
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  max-width: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  box-shadow: none;
+}
+
 #galleryCaption {
   margin-top: 10px;
   font-size: 11px;
   color: #222; /* Darker text color */
   font-weight: bold;
   text-align: center;
-}
-
-
-.profile-photo {
-  width: 180px;        /* adjust size if needed */
-  height: 180px;       /* must equal width for a circle */
-  border-radius: 50%;  /* makes it circular */
-  object-fit: cover;   /* prevents stretching */
-  display: block;
-  margin: 0 auto;      /* center it */
 }
