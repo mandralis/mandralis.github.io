@@ -341,10 +341,16 @@ video, iframe {
   color: #069;
 }
 
-.contact-icons i {
+/* .contact-icons i {
   margin-right: 8px;
   font-size: 18px;
   vertical-align: middle;
+} */
+
+.contact-icons i {
+  width: 22px;          /* force equal icon width */
+  text-align: center;   /* center icon inside that space */
+  margin-right: 6px;
 }
 
 .gallery-container {
