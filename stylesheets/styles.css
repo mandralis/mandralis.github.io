@@ -108,6 +108,7 @@ header {
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
+  text-align: center;
 }
 
 header ul {
@@ -236,6 +237,14 @@ footer {
 
   header {
     padding:0;
+  }
+
+  header h1 {
+  margin-bottom: 10px;
+  }
+
+  header p {
+    margin: 10px 0 15px;
   }
 
   header ul, header p.view {
