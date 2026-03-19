@@ -325,7 +325,7 @@ video, iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px 22px;
+  gap: 10px 10px;
   max-width: 240px;
 }
 
